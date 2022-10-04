@@ -1,10 +1,10 @@
 import Districts from "./Districts";
 
-export const Select = () => {
+export const Select = (props) => {
   return (
     <>
       <h2>選擇縣市</h2>
-      <Districts />
+      <Districts setCityToken={props.setCityToken} />
     </>
   );
 };
