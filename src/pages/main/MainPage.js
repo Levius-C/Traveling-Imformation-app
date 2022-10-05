@@ -1,14 +1,9 @@
-import { useState } from "react";
-import Result from "../../components/result/Result";
-import Select from "../../components/select/Select";
+import Result from "./result/Result";
 
 const MainPage = () => {
-  const [cityToken, setCityToken] = useState("Taipei");
-  console.log(cityToken);
   return (
     <div>
-      <Select setCityToken={setCityToken} />
-      <Result cityToken={cityToken} />
+      <Result />
     </div>
   );
 };

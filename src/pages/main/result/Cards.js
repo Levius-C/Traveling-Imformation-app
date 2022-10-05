@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Cards = (props) => {
   return (
     <div>
-      {props.cityAttractions?.map((attaction) => (
+      {props.cityattractions?.map((attaction) => (
         <div>
           <h1>{attaction.ScenicSpotName}</h1>
           <img
