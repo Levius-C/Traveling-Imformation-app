@@ -11,6 +11,10 @@ function App() {
   const [cityToken, setCityToken] = useState("Taipei");
   const [searchToken, setSearchToken] = useState("");
   const [currentPage, setCurrentPage] = useState(0);
+  const [attactionName, setAttactionName] = useState("");
+  const [attactionDetail, setAttactionDetail] = useState("");
+  const [attactionPic, setAttactionPic] = useState("");
+  const [attactionPicAlt, setAttactionPicAlt] = useState("");
   console.log(searchToken);
   return (
     <>
@@ -22,6 +26,14 @@ function App() {
           setSearchToken,
           currentPage,
           setCurrentPage,
+          attactionName,
+          setAttactionName,
+          attactionDetail,
+          setAttactionDetail,
+          attactionPic,
+          setAttactionPic,
+          attactionPicAlt,
+          setAttactionPicAlt,
         }}
       >
         <BrowserRouter>
