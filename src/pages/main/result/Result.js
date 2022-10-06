@@ -45,14 +45,33 @@ const Result = () => {
 
   return (
     <div>
-      <h2>
-        {dataAmount}筆資料中的第{currentPage * 4 + 1}到
-        {currentPage * 4 + 4 > dataAmount ? dataAmount : currentPage * 4 + 4}筆
-      </h2>
-      <button onClick={prevPage}>上一頁</button>第{currentPage + 1}頁，共
-      {dataAmount % 4 !== 0 ? Math.floor(dataAmount / 4) + 1 : dataAmount / 4}頁
-      <button onClick={nextPage}>下一頁</button>
+      <div className="lg:flex justify-center">
+        <h2 className="flex  justify-center text-2xl -center md:mr-4">
+          共{dataAmount}筆資料
+          <br />
+        </h2>
+        <h2 className="flex  justify-center text-2xl -center">
+          顯示第{currentPage * 4 + 1}到
+          {currentPage * 4 + 4 > dataAmount ? dataAmount : currentPage * 4 + 4}
+          筆
+        </h2>
+      </div>
       <Cards cityattractions={cityattractions} />
+      <div className="mt-10 mb-20 flex justify-evenly items-center">
+        <button onClick={prevPage} className="btn btn-xs md:btn-sm lg:btn-md">
+          上一頁
+        </button>
+        <p>
+          第{currentPage + 1}頁，共
+          {dataAmount % 4 !== 0
+            ? Math.floor(dataAmount / 4) + 1
+            : dataAmount / 4}
+          頁
+        </p>
+        <button onClick={nextPage} className="btn btn-xs md:btn-sm lg:btn-md ">
+          下一頁
+        </button>
+      </div>
     </div>
   );
 };

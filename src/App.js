@@ -1,3 +1,4 @@
+import "./index.css";
 import { useState, createContext } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Select from "./components/select/Select";
@@ -37,12 +38,20 @@ function App() {
         }}
       >
         <BrowserRouter>
-          <Navbar />
-          <Select />
-          <Routes>
-            <Route path="/" element={<MainPage />} />
-            <Route path="/info" element={<Info />} />
-          </Routes>
+          <div>
+            <Navbar />
+            <div className="flex sm:flex-col md:flex-row justify-between max-w-screen-xl lg:m-auto">
+              <div className="min-w-min">
+                <Select />
+              </div>
+              <div className="mt-10">
+                <Routes>
+                  <Route path="/" element={<MainPage />} />
+                  <Route path="/info" element={<Info />} />
+                </Routes>
+              </div>
+            </div>
+          </div>
         </BrowserRouter>
       </AppContext.Provider>
     </>

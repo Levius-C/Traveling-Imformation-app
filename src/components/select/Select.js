@@ -2,10 +2,9 @@ import Districts from "./Districts";
 
 export const Select = () => {
   return (
-    <>
-      <h2>選擇縣市</h2>
+    <div className="m-auto md:my-24 mt-8 md:mx-8 lg:ml-10">
       <Districts />
-    </>
+    </div>
   );
 };
 

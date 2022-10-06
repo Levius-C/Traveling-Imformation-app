@@ -28,11 +28,18 @@ const Districts = () => {
   );
 
   return (
-    <select name="city" onChange={onChangeHandler}>
-      {cityValue?.map((city) => (
-        <option value={city.City}>{city.CityName}</option>
-      ))}
-    </select>
+    <div className="flex justify-center items-center sm:flex-row md:flex-col ">
+      <p className="mr-1">選擇縣市</p>
+      <select
+        name="city"
+        onChange={onChangeHandler}
+        className="select select-bordered select-sm max-w-xs"
+      >
+        {cityValue?.map((city) => (
+          <option value={city.City}>{city.CityName}</option>
+        ))}
+      </select>
+    </div>
   );
 };
 
